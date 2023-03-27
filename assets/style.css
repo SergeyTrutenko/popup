@@ -306,13 +306,17 @@
 .calculate-content .step-3 .form-line label {
   font-size: 16px;
   cursor: pointer;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
 }
 .calculate-content .step-3 .form-line input {
   margin: 0 8px 0 0;
   width: 16px;
   height: 16px;
   cursor: pointer;
+}
+.calculate-content .step-3 .form-line input:disabled + span {
+  color: #C1C1C1;
 }
 .calculate-content .step-3 .form-line .infolink {
   margin-top: 5px;

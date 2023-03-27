@@ -355,7 +355,8 @@
       label{
         font-size: 16px;
         cursor: pointer;
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
       }
 
       input{
@@ -363,6 +364,11 @@
         width: 16px;
         height: 16px;
         cursor: pointer;
+        &:disabled{
+          +span{
+            color: #C1C1C1;
+          }
+        }
       }
 
       .infolink{
