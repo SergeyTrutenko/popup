@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://air-conditioner.ua/upload/Ukraine.png" type="image/x-icon">
+    <title>Подобрать кондиционер</title>
+    <link href="https://air-conditioner.ua/assets/2fa4db5f/css/bootstrap.css?1" rel="stylesheet">
+    <link href="assets/style.css" rel="stylesheet">
+</head>
+<body>
+<main class="main">
+    <div class="container">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn-demo" data-toggle="modal" data-target="#exampleModalCenter">
+            Подобрать кондиционер
+        </button>
+    </div>
+</main>
+
+<!-- Modal -->
+<div class="modal fade calculate-modal" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content calculate-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+            </button>
+            <h1>Подбор кондиционера по мощности</h1>
+
+            <div class="calculate-content-wrap">
+                <form id="step-1" class="step-1">
+                    <div class="inner">
+                        <label class="form-line">
+                            <img src="assets/image/icon_square.png" alt="">
+                            <p>Площадь помещения:</p>
+                            <input type="number" min="0" value="0">
+                            <span>м2</span>
+                        </label>
+                        <label class="form-line">
+                            <img src="assets/image/icon_height.png" alt="">
+                            <p>Высота до потолка:</p>
+                            <input type="number" min="0" value="0">
+                            <span>м</span>
+                        </label>
+                        <label class="form-line">
+                            <img src="assets/image/icon_insolation.png" alt="">
+                            <p>Инсоляция:</p>
+                            <select>
+                                <option>Выберите</option>
+                                <option>Слабая</option>
+                                <option>Средняя</option>
+                                <option>Сильная</option>
+                            </select>
+                            <span class="infolink">
+                                <span class="infolink__icon">?</span>
+                                <span class="infolink__content">
+                                    <p>
+                                        Степень освещенности помещения солнечными лучами при попадании прямого солнечного света.
+                                        Зависит от стороны света, на которую выходят окна (Север, Юг, Запад, Восток).
+                                        Измеряется в кВт*ч/м2 - количество энергии получаемое одним м2 площади в течении часа.
+                                    </p>
+                                </span>
+                            </span>
+                        </label>
+                        <label class="form-line">
+                            <img src="assets/image/icon_quantity.png" alt="">
+                            <p>Количество людей:</p>
+                            <input type="number" min="0" value="0">
+                            <span>чел</span>
+                        </label>
+                    </div>
+                    <button type="button" class="form-btn js-btn-step-1">Рассчитать мощность</button>
+                </form>
+
+                <div id="step-2" class="step-2">
+                    <div class="head-line">
+                        <img src="assets/image/icon_power.png" alt="">
+                        <p>2,35 кВт</p>
+                    </div>
+                    <p>Подберите релевантные варианты кондиционеров согласно данной расчетной мощности. В полученной выборке вы сможете найти модель, соответствующую вашим требованиям.</p>
+                    <div class="button-line">
+                        <button type="button" class="form-btn white-btn js-btn-step-back">Назад</button>
+                        <button type="button" class="form-btn js-btn-step-2">Подобрать кондиционер</button>
+                    </div>
+                </div>
+
+                <form id="step-3" class="step-3">
+                    <h2>Выберете 3 основных параметра для максимально точного подбора:</h2>
+
+                    <div class="inner">
+                        <div class="form-line">
+                            <img src="assets/image/icon_type.png" alt="">
+                            <p>Тип кондиционера:</p>
+                            <div class="infolink">
+                                <span class="infolink__icon">?</span>
+                                <span class="infolink__content">
+                                    <p>Инверторный кондиционер отличается от обычного on/off кондиционера возможностью плавного регулирования мощности компрессора</p>
+                                    <p>Инверторный кондиционер способен поддерживать заданную температуру в помещении с отклонением в 0,5°С. Обычный on/off кондиционер дает отклонение температуры около 2°С.</p>
+                                    <p>Инверторные кондиционеры потребляют на 30-40% меньше электроэнергии, чем on/off сплит-системы.</p>
+                                    <p>Температурный диапазон работы в режиме обогрев инверторных кондиционеров до -30°С, on/off кондиционеров до -15°С.</p>
+                                </span>
+                            </div>
+                            <div class="radio-btn-wrap">
+                                <label class="long"><input type="radio" name="type">Обычный on/off</label>
+                                <label class="long"><input type="radio" name="type">инверторный</label>
+                            </div>
+                        </div>
+                        <div class="form-line">
+                            <img src="assets/image/icon_heating.png" alt="">
+                            <p>Работа на обогрев:</p>
+                            <div class="infolink">
+                                <span class="infolink__icon">?</span>
+                                <span class="infolink__content">
+                                    <p>И обычные (on/off) и инверторные кондиционеры работают в режиме обогрева.</p>
+                                    <p>Минимальная отрицательная температура наружного воздуха, при которой кондиционер эффективно работает на тепло зависит от технологичности модели. </p>
+                                    <p>Предел температуры для обычного on/off кондиционера: -7°С; для инверторной сплит-системы: -15°С; для тепловых насосов воздух-воздух: -25°С / -30°С.</p>
+                                </span>
+                            </div>
+                            <div class="radio-btn-wrap">
+                                <label><input type="radio" name="heating">до -7°C</label>
+                                <label><input type="radio" name="heating">до -25°C</label>
+                                <label><input type="radio" name="heating">до -15°C</label>
+                                <label><input type="radio" name="heating">до -30°C</label>
+                            </div>
+                        </div>
+                        <div class="form-line">
+                            <img src="assets/image/icon_block.png" alt="">
+                            <p>Тип внутреннего блока:</p>
+                            <div class="infolink">
+                                <span class="infolink__icon">?</span>
+                                <span class="infolink__content">
+                                    <p>Тип внутреннего блока сплит-системы зависит от назначения помещения.
+                                        Для жилых и офисных помещений в 90% случаев используются настенные внутренние блоки.
+                                        Для коммерческих объектов применяются кассетные, канальные, напольно-потолочные внутренние блоки.</p>
+                                </span>
+                            </div>
+                            <div class="radio-btn-wrap">
+                                <label><input type="radio" name="block">Настенный</label>
+                                <label><input type="radio" name="block">Канальный</label>
+                                <label><input type="radio" name="block">Кассетный</label>
+                                <label><input type="radio" name="block">Напольно-потолочный</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="form-btn disabled" disabled>ОК</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="assets/jquery.js"></script>
+<script src="assets/bootstrap.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
