@@ -143,6 +143,8 @@
   padding: 16px;
   font-size: 12px;
   text-transform: none;
+  opacity: 0;
+  visibility: hidden;
 }
 .calculate-content .infolink__content.small {
   width: 260px !important;
