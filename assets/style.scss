@@ -161,17 +161,18 @@
       position: absolute;
       top: 100%;
       left: 70%;
-      width: auto!important;
-      max-width: 30vw;
-      min-width: 18vw;
+      width: 360px!important;
       background: #E0E4EB;
       box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
       border-radius: 4px;
       padding: 16px;
       font-size: 12px;
       text-transform: none;
-      opacity: 0;
-      visibility: hidden;
+      //opacity: 0;
+      //visibility: hidden;
+      &.small{
+        width: 260px!important;
+      }
       p{
         color: inherit;
         margin-bottom: 16px;
@@ -225,7 +226,7 @@
       border-bottom: 0;
     }
 
-    img{
+    svg{
       display: block;
       min-width: 18px;
       object-fit: none;
@@ -339,7 +340,7 @@
     .form-line{
       align-items: flex-start;
 
-      img{
+      svg{
         margin-top: 6px;
       }
 
@@ -347,18 +348,14 @@
         margin-right: 6px;
       }
 
+      .long{
+        width: 100% !important;
+      }
+
       label{
         font-size: 16px;
-        width: 65%;
         cursor: pointer;
-
-        &.long{
-          width: 100% !important;
-        }
-
-        &:nth-child(odd){
-          width: 35%;
-        }
+        display: inline-block;
       }
 
       input{
@@ -378,6 +375,15 @@
         display: flex;
         flex-wrap: wrap;
       }
+
+      .radio-line{
+        display: flex;
+        align-items: center;
+        width: 65%;
+        &:nth-child(odd){
+          width: 35%;
+        }
+      }
     }
 
     .form-btn{
@@ -391,15 +397,8 @@
 
 
 
-@media (max-width: 1200px){
-  .calculate-content .infolink__content{
-    max-width: 40vw;
-    min-width: 30vw;
-  }
-}
-
-@media (max-width: 992px){
-  .calculate-content .infolink__content{
+@media (max-width: 880px){
+  .calculate-content .infolink__content.small {
     left: auto;
     right: 100%;
   }
@@ -409,13 +408,13 @@
   .calculate-content .infolink{
     position: unset;
   }
-  .calculate-content .infolink__content{
-    right: auto;
-    left: 10px;
+
+  .calculate-content .infolink__content,
+  .calculate-content .infolink__content.small{
+    right: auto!important;
+    left: 10px!important;
     top: auto;
     bottom: auto;
-    max-width: unset;
-    min-width: unset;
     width: calc(100% - 20px)!important;
   }
 
