@@ -195,7 +195,7 @@
 .calculate-content .form-line:last-child {
   border-bottom: 0;
 }
-.calculate-content .form-line svg {
+.calculate-content .form-line img {
   display: block;
   min-width: 18px;
   object-fit: none;
@@ -294,7 +294,7 @@
 .calculate-content .step-3 .form-line {
   align-items: flex-start;
 }
-.calculate-content .step-3 .form-line svg {
+.calculate-content .step-3 .form-line img {
   margin-top: 6px;
 }
 .calculate-content .step-3 .form-line p {
